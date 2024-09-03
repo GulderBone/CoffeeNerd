@@ -13,10 +13,9 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             CoffeeNerdTheme {
-                IntroScreenRoot(
-                    onSignUpClick = {},
-                    onSignInClick = {}
-                )
+                IntroScreenRoot(onSignUpClick = { /*TODO*/ }) {
+
+                }
             }
         }
     }

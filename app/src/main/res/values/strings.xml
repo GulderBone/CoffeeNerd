@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Coffee Nerd</string>
-    <string name="sign_up">Sign up</string>
-    <string name="sign_in">Sign in</string>
     <string name="welcome_to_coffee_nerd">Welcome to Coffee Nerd</string>
-    <string name="coffe_nerd_description">The best coffee app in the world</string>
+    <string name="coffe_nerd_description">Best coffee App on the market</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
 </resources>

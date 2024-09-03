@@ -16,4 +16,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "Coffee Nerd"
 include(":app")
- 
+include(":auth:presentation")
+include(":auth:domain")
+include(":auth:data")

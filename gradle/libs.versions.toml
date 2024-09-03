@@ -1,33 +1,21 @@
 [versions]
-androidDesugarJdkLibs = "2.1.1"
 agp = "8.5.2"
-androidTools = "31.6.0"
-kotlin = "2.0.0"
-compose = "1.6.11"
+kotlin = "1.9.0"
 coreKtx = "1.13.1"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 lifecycleRuntimeKtx = "2.8.4"
 activityCompose = "1.9.1"
-composeBom = "2024.08.00"
-room = "2.6.1"
+composeBom = "2024.06.00"
+appcompat = "1.7.0"
+material = "1.12.0"
 ksp = "2.0.0-1.0.22"
+room = "2.6.1"
 hilt = "2.52"
-hiltExt = "1.2.0"
-android = "8.1.4"
-
-# Project versions
-projectApplicationId = "com.gulderbone.coffeenerd"
-projectVersionName = "1.0"
-projectMinSdkVersion = "25"
-projectTargetSdkVersion = "34"
-projectCompileSdkVersion = "34"
-projectVersionCode = "1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
-android-desugarJdkLibs = { group = "com.android.tools", name = "desugar_jdk_libs", version.ref = "androidDesugarJdkLibs" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
@@ -41,38 +29,23 @@ androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-toolin
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
-room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
-room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
-room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
-hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
-hilt-android-testing = { group = "com.google.dagger", name = "hilt-android-testing", version.ref = "hilt" }
-hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hilt" }
-hilt-core = { group = "com.google.dagger", name = "hilt-core", version.ref = "hilt" }
-hilt-ext-compiler = { group = "androidx.hilt", name = "hilt-compiler", version.ref = "hiltExt" }
-hilt-ext-work = { group = "androidx.hilt", name = "hilt-work", version.ref = "hiltExt" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 
 # Gradle
 android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
-android-tools-common = { group = "com.android.tools", name = "common", version.ref = "androidTools" }
 kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
 ksp-gradlePlugin = { group = "com.google.devtools.ksp", name = "com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
 room-gradlePlugin = { group = "androidx.room", name = "room-gradle-plugin", version.ref = "room" }
 hilt-gradlePlugin = { group = "com.google.dagger", name = "hilt-android-gradle-plugin", version.ref = "hilt" }
 
+
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
-android-library = { id = "com.android.library", version.ref = "android" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-jetbrainsCompose = { id = "org.jetbrains.compose", version.ref = "compose" }
-compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+android-library = { id = "com.android.library", version.ref = "agp" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 room = { id = "androidx.room", version.ref = "room" }
-hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 
-coffeenerd-android-application = { id = "coffeenerd.android.application", version = "unspecified" }
-coffeenerd-android-application-compose = { id = "coffeenerd.android.application.compose", version = "unspecified" }
-coffeenerd-android-library = { id = "coffeenerd.android.library", version = "unspecified" }
-coffeenerd-android-library-compose = { id = "coffeenerd.android.library.compose", version = "unspecified" }
-coffeenerd-android-feature-ui = { id = "coffeenerd.android.feature.ui", version = "unspecified" }
-coffeenerd-android-room = { id = "coffeenerd.android.room", version = "unspecified" }
-coffeenerd-android-hilt = { id = "coffeenerd.android.hilt", version = "unspecified" }

@@ -47,7 +47,6 @@ fun IntroScreen(onAction: (IntroAction) -> Unit) {
                 .weight(1f),
             contentAlignment = Alignment.Center
         ) {
-            CoffeeNerdLogo()
         }
         Column(
             modifier = Modifier
