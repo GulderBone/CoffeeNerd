@@ -25,6 +25,10 @@ gradlePlugin {
             id = "coffeenerd.android.application"
             implementationClass = "AndroidApplicationConventionPlugin"
         }
+        register("androidLibrary") {
+            id = "coffeenerd.android.library"
+            implementationClass = "AndroidLibraryConventionPlugin"
+        }
         register("androidApplicationCompose") {
             id = "coffeenerd.android.application.compose"
             implementationClass = "AndroidApplicationComposeConventionPlugin"
@@ -33,13 +37,9 @@ gradlePlugin {
             id = "coffeenerd.android.library.compose"
             implementationClass = "AndroidLibraryComposeConventionPlugin"
         }
-        register("androidLibrary") {
-            id = "coffeenerd.android.library"
-            implementationClass = "AndroidLibraryConventionPlugin"
-        }
-        register("androidFeature") {
-            id = "coffeenerd.android.feature"
-            implementationClass = "AndroidFeatureConventionPlugin"
+        register("androidFeatureUi") {
+            id = "coffeenerd.android.feature.ui"
+            implementationClass = "AndroidFeatureUiConventionPlugin"
         }
         register("androidHilt") {
             id = "coffeenerd.android.hilt"

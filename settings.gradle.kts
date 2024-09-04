@@ -14,7 +14,8 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Coffee Nerd"
+rootProject.name = "CoffeeNerd"
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 include(":app")
 include(":auth:presentation")
 include(":auth:domain")
