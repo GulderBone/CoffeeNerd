@@ -30,9 +30,8 @@ fun GradientBackground(
                 .background(
                     brush = Brush.verticalGradient(
                         colors = listOf(
-                            MaterialTheme.colorScheme.primaryContainer,
+                            MaterialTheme.colorScheme.secondary,
                             MaterialTheme.colorScheme.primary,
-                            MaterialTheme.colorScheme.primaryContainer
                         )
                     )
                 )

@@ -1,5 +1,6 @@
 package com.gulderbone.coffeenerd.components
 
+import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.IntrinsicSize
@@ -76,9 +77,6 @@ fun OutlinedActionButton(
     OutlinedButton(
         onClick = onClick,
         enabled = enabled,
-        colors = ButtonDefaults.outlinedButtonColors(
-            contentColor = MaterialTheme.colorScheme.onBackground,
-        ),
         border = BorderStroke(
             width = 0.5.dp,
             color = MaterialTheme.colorScheme.onBackground
@@ -104,20 +102,33 @@ fun OutlinedActionButton(
                 text = text,
                 modifier = Modifier.alpha(if (isLoading) 0f else 1f),
                 fontWeight = FontWeight.Medium,
+                color = MaterialTheme.colorScheme.onBackground
             )
         }
     }
 }
 
-@Preview
+@Preview(showBackground = true)
 @Composable
 fun ActionButtonPreview() {
-    ActionButton(text = "Test", isLoading = false, onClick = {  })
+    ActionButton(text = "Test", isLoading = false, onClick = { })
 }
 
-@Preview
+@Preview(name = "Dark Theme", showBackground = true, uiMode = UI_MODE_NIGHT_YES)
 @Composable
-fun ActionButtonLoadingPreview() {
-    ActionButton(text = "Test", isLoading = true, onClick = {  })
+fun ActionButtonPreviewDark() {
+    ActionButton(text = "Test", isLoading = false, onClick = { })
+}
+
+@Preview(showBackground = true)
+@Composable
+fun OutlinedActionButtonPreview() {
+    OutlinedActionButton(text = "Test", isLoading = false, onClick = { })
+}
+
+@Preview(name = "Dark Theme", showBackground = true, uiMode = UI_MODE_NIGHT_YES)
+@Composable
+fun OutlinedActionButtonPreviewDark() {
+    OutlinedActionButton(text = "Test", isLoading = false, onClick = { })
 }
 

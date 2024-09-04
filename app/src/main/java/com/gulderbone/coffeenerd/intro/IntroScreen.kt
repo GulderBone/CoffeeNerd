@@ -1,5 +1,6 @@
 package com.gulderbone.coffeenerd.intro
 
+import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -86,27 +87,24 @@ fun IntroScreen(onAction: (IntroAction) -> Unit) {
     }
 }
 
-@Composable
-fun CoffeeNerdLogo() {
-    Icon(
-        imageVector = LogoIcon,
-        contentDescription = "Logo",
-        tint = MaterialTheme.colorScheme.onBackground
-    )
-}
-
 sealed interface IntroAction {
     data object SignUp : IntroAction
     data object SignIn : IntroAction
 }
 
-val LogoIcon: ImageVector
-    @Composable
-    get() = ImageVector.vectorResource(id = R.drawable.logo)
-
-@Preview
+@Preview(name = "Light Theme", heightDp = 480, widthDp = 360)
 @Composable
 private fun IntroScreenPreview() {
+    CoffeeNerdTheme {
+        IntroScreen(
+            onAction = {}
+        )
+    }
+}
+
+@Preview(name = "Dark Theme", heightDp = 480, widthDp = 360, uiMode = UI_MODE_NIGHT_YES)
+@Composable
+private fun IntroScreenPreviewDark() {
     CoffeeNerdTheme {
         IntroScreen(
             onAction = {}
