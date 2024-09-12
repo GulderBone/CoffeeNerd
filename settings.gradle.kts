@@ -14,9 +14,12 @@ dependencyResolutionManagement {
     }
 }
 
+gradle.startParameter.excludedTaskNames.addAll(listOf(":build-logic:convention:testClasses"))
+
 rootProject.name = "CoffeeNerd"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 include(":app")
 include(":auth:presentation")
 include(":auth:domain")
 include(":auth:data")
+include(":core:presentation:designsystem")

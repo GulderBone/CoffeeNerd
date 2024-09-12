@@ -1,6 +1,6 @@
 plugins {
-    id("com.android.library")
     alias(libs.plugins.coffeenerd.android.feature.ui)
+    alias(libs.plugins.coffeenerd.android.hilt)
 }
 
 android {
@@ -8,4 +8,5 @@ android {
 }
 
 dependencies {
+    implementation(projects.auth.domain)
 }

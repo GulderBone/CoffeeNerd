@@ -1,4 +1,4 @@
-package com.gulderbone.coffeenerd.ui.theme
+package com.gulderbone.core.presentation.designsystem
 
 import androidx.compose.ui.graphics.Color
 
@@ -12,3 +12,7 @@ val tertiaryDark = Color(0xFF655F31)
 
 val CoffeeNerdWhite = Color(0xFFFAFAFA)
 val CoffeeNerdBlack = Color(0xFF080707)
+
+val CoffeeNerdGreen = Color(0xFF00F15E)
+
+val CoffeeNerdDarkRed = Color(0xFFBB3D3D)

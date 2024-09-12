@@ -1,6 +1,5 @@
-package com.gulderbone.coffeenerd.components
+package com.gulderbone.core.presentation.designsystem.components
 
-import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.IntrinsicSize
@@ -20,11 +19,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.gulderbone.core.presentation.designsystem.CoffeeNerdTheme
 
 @Composable
-fun ActionButton(
+fun CoffeeNerdActionButton(
     text: String,
     isLoading: Boolean,
     modifier: Modifier = Modifier,
@@ -67,7 +66,7 @@ fun ActionButton(
 }
 
 @Composable
-fun OutlinedActionButton(
+fun CoffeeNerdOutlinedActionButton(
     text: String,
     isLoading: Boolean,
     modifier: Modifier = Modifier,
@@ -102,33 +101,39 @@ fun OutlinedActionButton(
                 text = text,
                 modifier = Modifier.alpha(if (isLoading) 0f else 1f),
                 fontWeight = FontWeight.Medium,
-                color = MaterialTheme.colorScheme.onBackground
             )
         }
     }
 }
 
-@Preview(showBackground = true)
+@ThemePreviews
 @Composable
 fun ActionButtonPreview() {
-    ActionButton(text = "Test", isLoading = false, onClick = { })
+    CoffeeNerdTheme {
+        CoffeeNerdActionButton(text = "Test", isLoading = false, onClick = { })
+    }
 }
 
-@Preview(name = "Dark Theme", showBackground = true, uiMode = UI_MODE_NIGHT_YES)
+@ThemePreviews
 @Composable
-fun ActionButtonPreviewDark() {
-    ActionButton(text = "Test", isLoading = false, onClick = { })
+fun DisabledActionButtonPreview() {
+    CoffeeNerdTheme {
+        CoffeeNerdActionButton(text = "Test", isLoading = false, enabled = false, onClick = { })
+    }
 }
 
-@Preview(showBackground = true)
+@ThemePreviews
 @Composable
 fun OutlinedActionButtonPreview() {
-    OutlinedActionButton(text = "Test", isLoading = false, onClick = { })
+    CoffeeNerdTheme {
+        CoffeeNerdOutlinedActionButton(text = "Test", isLoading = false, onClick = { })
+    }
 }
 
-@Preview(name = "Dark Theme", showBackground = true, uiMode = UI_MODE_NIGHT_YES)
+@ThemePreviews
 @Composable
-fun OutlinedActionButtonPreviewDark() {
-    OutlinedActionButton(text = "Test", isLoading = false, onClick = { })
+fun DisabledOutlinedActionButtonPreview() {
+    CoffeeNerdTheme {
+        CoffeeNerdOutlinedActionButton(text = "Test", isLoading = false, enabled = false, onClick = { })
+    }
 }
-

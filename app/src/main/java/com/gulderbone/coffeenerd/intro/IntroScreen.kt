@@ -7,22 +7,17 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.gulderbone.coffeenerd.R
-import com.gulderbone.coffeenerd.components.GradientBackground
-import com.gulderbone.coffeenerd.components.OutlinedActionButton
-import com.gulderbone.coffeenerd.ui.theme.CoffeeNerdTheme
+import com.gulderbone.core.presentation.designsystem.components.CoffeeNerdOutlinedActionButton
 
 @Composable
 fun IntroScreenRoot(
@@ -41,7 +36,7 @@ fun IntroScreenRoot(
 
 @Composable
 fun IntroScreen(onAction: (IntroAction) -> Unit) {
-    GradientBackground {
+    com.gulderbone.core.presentation.designsystem.components.GradientBackground {
         Box(
             modifier = Modifier
                 .fillMaxWidth()
@@ -67,7 +62,7 @@ fun IntroScreen(onAction: (IntroAction) -> Unit) {
                 color = MaterialTheme.colorScheme.onBackground,
             )
             Spacer(modifier = Modifier.height(12.dp))
-            OutlinedActionButton(
+            CoffeeNerdOutlinedActionButton(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(vertical = 8.dp),
@@ -75,7 +70,7 @@ fun IntroScreen(onAction: (IntroAction) -> Unit) {
                 isLoading = false,
                 onClick = { onAction(IntroAction.SignIn) }
             )
-            OutlinedActionButton(
+            CoffeeNerdOutlinedActionButton(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(vertical = 8.dp),
@@ -95,7 +90,7 @@ sealed interface IntroAction {
 @Preview(name = "Light Theme", heightDp = 480, widthDp = 360)
 @Composable
 private fun IntroScreenPreview() {
-    CoffeeNerdTheme {
+    com.gulderbone.core.presentation.designsystem.CoffeeNerdTheme {
         IntroScreen(
             onAction = {}
         )
@@ -105,7 +100,7 @@ private fun IntroScreenPreview() {
 @Preview(name = "Dark Theme", heightDp = 480, widthDp = 360, uiMode = UI_MODE_NIGHT_YES)
 @Composable
 private fun IntroScreenPreviewDark() {
-    CoffeeNerdTheme {
+    com.gulderbone.core.presentation.designsystem.CoffeeNerdTheme {
         IntroScreen(
             onAction = {}
         )

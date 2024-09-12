@@ -34,6 +34,7 @@ private fun Project.configureKotlin() {
     tasks.withType<KotlinCompile>().configureEach {
         compilerOptions {
             jvmTarget.set(JvmTarget.JVM_11)
+            freeCompilerArgs.add("-opt-in=androidx.compose.foundation.ExperimentalFoundationApi")
         }
     }
 }

@@ -5,7 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import com.gulderbone.coffeenerd.intro.IntroScreenRoot
-import com.gulderbone.coffeenerd.ui.theme.CoffeeNerdTheme
+import com.gulderbone.core.presentation.designsystem.CoffeeNerdTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

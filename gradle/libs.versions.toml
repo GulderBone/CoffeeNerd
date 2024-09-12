@@ -1,6 +1,6 @@
 [versions]
-agp = "8.5.2"
-kotlin = "1.9.0"
+agp = "8.6.0"
+kotlin = "2.0.0"
 coreKtx = "1.13.1"
 junit = "4.13.2"
 junitVersion = "1.2.1"
@@ -13,7 +13,9 @@ material = "1.12.0"
 ksp = "2.0.0-1.0.22"
 room = "2.6.1"
 hilt = "2.52"
+hiltExt = "1.1.0"
 desugar_jdk_libs = "2.0.4"
+androidxHiltNavigationCompose = "1.2.0"
 
 # Project versions
 projectApplicationId = "com.gulderbone.coffeenerd"
@@ -43,6 +45,13 @@ androidx-compose-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-
 androidx-compose-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidx-hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "androidxHiltNavigationCompose" }
+hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
+hilt-android-testing = { group = "com.google.dagger", name = "hilt-android-testing", version.ref = "hilt" }
+hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hilt" }
+hilt-core = { group = "com.google.dagger", name = "hilt-core", version.ref = "hilt" }
+hilt-ext-compiler = { group = "androidx.hilt", name = "hilt-compiler", version.ref = "hiltExt" }
+hilt-ext-work = { group = "androidx.hilt", name = "hilt-work", version.ref = "hiltExt" }
 
 # Gradle
 android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
@@ -59,6 +68,7 @@ android-library = { id = "com.android.library", version.ref = "agp" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 room = { id = "androidx.room", version.ref = "room" }
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 
 coffeenerd-android-application = { id = "coffeenerd.android.application", version = "unspecified" }
@@ -67,6 +77,7 @@ coffeenerd-android-library = { id = "coffeenerd.android.library", version = "uns
 coffeenerd-android-library-compose = { id = "coffeenerd.android.library.compose", version = "unspecified" }
 coffeenerd-android-feature-ui = { id = "coffeenerd.android.feature.ui", version = "unspecified" }
 coffeenerd-android-room = { id = "coffeenerd.android.room", version = "unspecified" }
+coffeenerd-android-hilt = { id = "coffeenerd.android.hilt", version = "unspecified" }
 
 [bundles]
 compose = [

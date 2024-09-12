@@ -1,5 +1,7 @@
-package com.gulderbone.coffeenerd.components
+package com.gulderbone.core.presentation.designsystem.components
 
+import android.content.res.Configuration.UI_MODE_NIGHT_NO
+import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -11,7 +13,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.tooling.preview.Preview
-import com.gulderbone.coffeenerd.ui.theme.CoffeeNerdTheme
+import com.gulderbone.core.presentation.designsystem.CoffeeNerdTheme
+
 
 @Composable
 fun GradientBackground(
@@ -52,7 +55,7 @@ fun GradientBackground(
     }
 }
 
-@Preview
+@ThemePreviews
 @Composable
 private fun GradientBackgroundPreview() {
     CoffeeNerdTheme {
@@ -63,3 +66,11 @@ private fun GradientBackgroundPreview() {
         }
     }
 }
+
+@Preview(name = "Dark Mode", showBackground = true, uiMode = UI_MODE_NIGHT_YES)
+@Preview(name = "Light Mode", showBackground = true, uiMode = UI_MODE_NIGHT_NO)
+annotation class ThemePreviews
+
+@Preview(name = "Dark Mode", showBackground = true, uiMode = UI_MODE_NIGHT_YES, heightDp = 640, widthDp = 360)
+@Preview(name = "Light Mode", showBackground = true, uiMode = UI_MODE_NIGHT_NO, heightDp = 640, widthDp = 360)
+annotation class ScreenThemePreviews

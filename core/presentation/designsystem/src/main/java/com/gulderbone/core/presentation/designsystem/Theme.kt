@@ -1,4 +1,4 @@
-package com.gulderbone.coffeenerd.ui.theme
+package com.gulderbone.core.presentation.designsystem
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
@@ -18,6 +18,7 @@ private val DarkColorScheme = darkColorScheme(
     onSecondary = Color.White,
     onTertiary = Color.White,
     onSurface = Color(0xFF1C1B1F),
+    error = CoffeeNerdDarkRed,
 )
 
 private val LightColorScheme = lightColorScheme(
@@ -31,6 +32,7 @@ private val LightColorScheme = lightColorScheme(
     onSecondary = Color.White,
     onTertiary = Color.White,
     onSurface = Color(0xFF1C1B1F),
+    error = CoffeeNerdDarkRed,
 )
 
 @Composable

@@ -15,6 +15,7 @@ class AndroidLibraryConventionPlugin: Plugin<Project> {
             pluginManager.run {
                 apply("com.android.library")
                 apply("org.jetbrains.kotlin.android")
+                apply("coffeenerd.android.hilt")
             }
 
             extensions.configure<LibraryExtension> {
